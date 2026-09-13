@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="panelPrincipal" prefHeight="400.0" prefWidth="650.0"
+            onContextMenuRequested="#mostrarMenuContextual"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.asignacionevaluada1.MenuPrincipalController">
+    <fx:define>
+        <ContextMenu fx:id="menuContextual">
+            <items>
+                <MenuItem text="Registro de Estudiantes" onAction="#abrirRegistroEstudiantes" />
+                <MenuItem text="Registro de Películas" onAction="#abrirRegistroPeliculas" />
+                <MenuItem text="Información del Desarrollador" onAction="#mostrarDesarrollador" />
+            </items>
+        </ContextMenu>
+    </fx:define>
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Archivo">
+                    <items>
+                        <MenuItem text="Cerrar" onAction="#cerrarAplicacion" />
+                    </items>
+                </Menu>
+                <Menu text="Catálogo">
+                    <items>
+                        <MenuItem text="Registro de Estudiantes" onAction="#abrirRegistroEstudiantes" />
+                        <MenuItem text="Registro de Películas" onAction="#abrirRegistroPeliculas" />
+                    </items>
+                </Menu>
+                <Menu text="Desarrollador">
+                    <items>
+                        <MenuItem text="Acerca de" onAction="#mostrarDesarrollador" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="18.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <Label text="Sistema de Registro">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+            <Label text="Utilice el menú Catálogo para abrir los formularios." />
+            <Label text="También puede hacer clic derecho para mostrar el menú contextual." />
+        </VBox>
+    </center>
+</BorderPane>
+

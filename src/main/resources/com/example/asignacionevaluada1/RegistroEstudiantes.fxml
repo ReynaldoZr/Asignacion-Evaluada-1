@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="650.0" spacing="15.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.asignacionevaluada1.RegistroEstudiantesController">
+    <padding>
+        <Insets bottom="25.0" left="35.0" right="35.0" top="25.0" />
+    </padding>
+
+    <Label text="Registro de Estudiantes">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="15.0" vgap="13.0">
+        <Label text="Nombre completo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtNombre" promptText="Digite el nombre completo"
+                   prefWidth="350.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Carnet:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtCarnet" promptText="Digite el número de carnet"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Carrera:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="txtCarrera" promptText="Digite la carrera"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Correo:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="txtCorreo" promptText="Digite el correo electrónico"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Teléfono:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="txtTelefono" promptText="Digite el número de teléfono"
+                   GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="15.0">
+        <Button fx:id="btnGuardar" text="Guardar estudiante" onAction="#guardarEstudiante" />
+        <Button fx:id="btnLimpiar" text="Limpiar campos" onAction="#limpiarCampos" />
+    </HBox>
+
+    <Label text="Estudiantes registrados">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <TextArea fx:id="txtRegistros" editable="false" prefHeight="260.0" prefWidth="570.0"
+              promptText="Aquí se mostrará la información registrada" wrapText="true" />
+</VBox>
+
